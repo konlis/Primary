@@ -241,7 +241,6 @@ header {
 
 .work-image {
   position: absolute;
-  width: 50%;
   height: 100%;
   overflow: hidden;
 }
@@ -249,7 +248,7 @@ header {
 .work-image::after {
   top: 40px;
   max-width: 250px;
-  right: 25px;
+  right: 25%;
   display: block;
   content: "";
   height: 90%;
@@ -259,8 +258,9 @@ header {
   background-color: green;
 }
 
-.work-image :hover {
-  transform: none;
+.work-image:hover::after {
+  top: 20px;
+  left: 0;
 }
 
 .work-image img {
@@ -377,7 +377,7 @@ header {
 }
 
 /*Media*/
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .flex-grand-parent,
   .flex-parent2 {
     -ms-flex-direction: column;
@@ -389,6 +389,10 @@ header {
   }
   .work-image {
     height: inherit;
+  }
+  .work-description {
+    padding: 120px 0;
+    max-width: 300px;
   }
   .contact-data {
     margin-top: 50px;
