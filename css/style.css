@@ -248,14 +248,15 @@ header {
 }
 
 .work-image {
-  position: absolute;
   height: 100%;
+  width: 100%;
+  max-width: 250px;
+  position: relative;
 }
 
 .work-image::after {
   top: 20px;
   right: 20px;
-  width: 100%;
   display: block;
   content: "";
   height: 100%;
@@ -267,7 +268,7 @@ header {
 
 .work-image:hover:after {
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .work-image img {
@@ -279,10 +280,9 @@ header {
 }
 
 .work-description {
-  padding: 36px 0 36px 45%;
+  padding: 36px 0 36px;
   margin: 0 10px;
   text-align: left;
-  position: absolute;
 }
 
 .work-description .services-title {
@@ -408,8 +408,8 @@ header {
     right: 10px;
   }
   .work-description {
-    padding: 180px 0;
-    max-width: 300px;
+    margin: 0 -10px;
+    max-width: 290px;
   }
   .contact-data {
     margin-top: 50px;
