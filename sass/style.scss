@@ -232,6 +232,7 @@ header {
 
 .flex-parent2 {
     flex: 0 0 50%;
+    display: flex;
     position: relative;
     flex-direction: row;
     margin-bottom: 96px;
@@ -240,17 +241,15 @@ header {
 
 .work-image {
     position: absolute;
-    //width: 100%;
     height: 100%;
-    overflow: hidden;
 
     &::after {
-        top: 40px;
-        max-width: 250px;
-        right: 25%;
+        top: 20px;
+        right: 20px;
+        width: 100%;
         display: block;
         content: "";
-        height: 90%;
+        height: 100%;
         width: 100%;
         position: absolute;
         opacity: 0.3;
@@ -259,7 +258,7 @@ header {
 }
 
 .work-image:hover::after {
-    top: 20px;
+    top: 0;
     left: 0;
 }
 
@@ -268,7 +267,7 @@ header {
     height: 100%;
     object-fit: cover;
     transtion: all 1s;
-    padding: 20px 0;
+    //padding: 20px 0;
 }
 
 .work-description {
@@ -374,15 +373,19 @@ header {
 
     .work-image img {
         max-width: 100%;
-        height: 150px;
+        height: 200px;
     }
 
     .work-image {
         height: inherit;
+
+        &::after{
+
+        }
     }
 
     .work-description {
-        padding: 120px 0;
+        padding: 180px 0;
         max-width: 300px;
     }
 
