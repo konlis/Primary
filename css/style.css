@@ -186,6 +186,12 @@ header {
   position: relative;
   margin: 0 10px;
   text-align: left;
+  padding-bottom: 80px;
+}
+
+.flex-parent .btn {
+  position: absolute;
+  bottom: 0;
 }
 
 .flex-parent .floating-number {
@@ -259,13 +265,13 @@ header {
   background-color: green;
 }
 
-.work-image:hover::after {
+.work-image:hover:after {
   top: 0;
   left: 0;
 }
 
 .work-image img {
-  max-width: 250px;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -273,9 +279,10 @@ header {
 }
 
 .work-description {
-  padding: 36px 0 36px 50%;
+  padding: 36px 0 36px 45%;
   margin: 0 10px;
   text-align: left;
+  position: absolute;
 }
 
 .work-description .services-title {
@@ -383,12 +390,22 @@ header {
     -ms-flex-direction: column;
         flex-direction: column;
   }
+  .flex-parent {
+    padding-bottom: 0;
+  }
+  .flex-parent .btn {
+    position: static;
+  }
   .work-image img {
     max-width: 100%;
     height: 200px;
   }
   .work-image {
     height: inherit;
+  }
+  .work-image::after {
+    top: 10px;
+    right: 10px;
   }
   .work-description {
     padding: 180px 0;
